@@ -557,7 +557,10 @@ figure{
 /*----------------------------------------
     Body Overlay 
 -----------------------------------------*/
-
+.over{
+  padding: 15px;
+  overflow: hidden;
+}
 .body-overlay {
   background-color: #151515;
   height: 100%;
@@ -1198,12 +1201,16 @@ figure{
 
 @media (max-width: 768px) {
   .responsive-text {
+    padding: 15px;
+    overflow: hidden;
       font-size: 1.2rem; /* Réduction de la taille du texte pour les écrans moyens */
   }
 }
 
 @media (max-width: 480px) {
   .responsive-text {
+    padding: 15px;
+    overflow: hidden;
       font-size: 1rem; /* Réduction de la taille du texte pour les petits écrans */
   }
 }
