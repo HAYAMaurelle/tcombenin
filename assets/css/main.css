@@ -559,7 +559,7 @@ figure{
 -----------------------------------------*/
 .over{
   padding: 15px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 .body-overlay {
   background-color: #151515;
