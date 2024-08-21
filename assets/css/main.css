@@ -557,9 +557,7 @@ figure{
 /*----------------------------------------
     Body Overlay 
 -----------------------------------------*/
-body{
-  overflow: hidden;
-}
+
 .body-overlay {
   background-color: #151515;
   height: 100%;
