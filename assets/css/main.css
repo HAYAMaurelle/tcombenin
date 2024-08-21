@@ -557,6 +557,9 @@ figure{
 /*----------------------------------------
     Body Overlay 
 -----------------------------------------*/
+body{
+  overflow: hidden;
+}
 .body-overlay {
   background-color: #151515;
   height: 100%;
@@ -1192,6 +1195,21 @@ figure{
 /*----------------------------------------*/
 /*  PRELOADER CSS START
 /*----------------------------------------*/
+
+/* texte formation*/
+
+@media (max-width: 768px) {
+  .responsive-text {
+      font-size: 1.2rem; /* Réduction de la taille du texte pour les écrans moyens */
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-text {
+      font-size: 1rem; /* Réduction de la taille du texte pour les petits écrans */
+  }
+}
+
 #preloader {
   position: fixed;
   width: 100%;
