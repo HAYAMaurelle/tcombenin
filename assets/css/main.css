@@ -548,7 +548,9 @@ figure{
   opacity: 0.7;
   visibility: visible;
 }
-
+body{
+  overflow-x: hidden;
+}
 .bd-sticky {
   position: sticky;
   top: 120px;
