@@ -1,0 +1,18 @@
+.contenu {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#lirePlusBtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#lirePlusBtn:hover {
+    background-color: #45a049;
+}

@@ -21,6 +21,43 @@
    <link rel="stylesheet" href="assets/css/icomoon.css">
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
+   <link rel="stylesheet" href="styles.css">
+
+   <style>
+      .contenu {
+          max-width: 800px; /* Largeur maximale du conteneur pour éviter que le texte ne soit trop serré */
+          margin: 0 auto; /* Centrer le conteneur */
+          text-align: left; /* Aligner le texte à gauche */
+          font-family: Arial, sans-serif;
+          line-height: 1.6; /* Espacement entre les lignes pour améliorer la lisibilité */
+      }
+
+      .center-heading-on-pc {
+          text-align: center;
+      }
+
+      #lirePlusBtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+          border: none;
+          cursor: pointer;
+          margin-top: 10px;
+          display: block; /* Pour que le bouton prenne toute la largeur disponible */
+          width: 100%;
+          max-width: 200px; /* Limite la largeur du bouton */
+          margin-left: auto; /* Centre le bouton */
+          margin-right: auto;
+      }
+
+      #lirePlusBtn:hover {
+          background-color: #45a049;
+      }
+
+      #more {
+          display: none;
+      }
+  </style>
 </head>
 
 <body>
@@ -496,14 +533,63 @@
  <!-- Service Slider area end --> 
   <div class="ha"></div>
 
-  <section class="responsive-section over">
-   <div class="title-box mb-10 wow fadeInLeft formation" data-wow-delay=".5s">
+<!-- texte sur formation-->
+<div class="contenu">
+   <h3 class="section-title mt-10 center-heading-on-pc">Des informations sur nos formations</h3>
+   <p id="texte">
+       <div class="center-text-on-pc">
+           T-COM-BENIN : Un tremplin vers l'emploi au cœur de Cotonou
+           <br>Créé en 2020, T-COM-BENIN s'est rapidement imposé comme un acteur 
+       </div>
+       <span id="more">
+           majeur de la formation professionnelle au Bénin. Situé à Cotonou, le cœur économique du pays, nous offrons des formations intensives et pratiques dans des domaines porteurs d'avenir : électro-télécommunication, électronique, informatique et froid et climatisation.
+           Ces formations, d'une durée modulable entre 1 et 2 ans et demi, sont conçues pour répondre aux besoins actuels du marché de l'emploi béninois et régional. Elles allient théorie et pratique grâce à des équipements modernes et à un encadrement pédagogique de qualité. De plus, un stage en entreprise est systématiquement organisé en fin de cursus, permettant aux apprenants de mettre en pratique leurs connaissances et de développer un réseau professionnel solide.
+           <strong>Pourquoi choisir notre formation?</strong><br>
+           Des formations adaptées au marché de l'emploi : Les programmes proposés sont conçus en étroite collaboration avec les entreprises, garantissant ainsi une adéquation parfaite entre les compétences acquises et les attentes des recruteurs.<br>
+           Un encadrement personnalisé : Les formateurs de T-COM-BENIN sont des professionnels expérimentés, à l'écoute des besoins de chaque apprenant.<br>
+           Des équipements modernes : Les ateliers et les salles de cours sont équipés de matériel de dernière génération, permettant aux apprenants de travailler dans des conditions optimales.<br>
+           Un accompagnement vers l'emploi : L'institut met tout en œuvre pour faciliter l'insertion professionnelle de ses diplômés, notamment grâce à un service d'orientation et à des partenariats avec les entreprises.
+           <br>
+           En choisissant T-COM-BENIN, vous investissez dans votre avenir professionnel et contribuez au développement économique du Bénin. br
+           <strong style="color: rgba(161, 161, 7, 0.986);">Modalités d'inscription:</strong><br>
+           Pour vous inscrire à l'une de nos formations, veuillez fournir les pièces suivantes :<br>
+           <strong>
+               ** Une copie de votre acte de naissance<br>
+               ** Un relevé de notes des derniers diplômes<br>
+               ** Une chemise dossier<br>
+               ** La première tranche de la scolarité.<br>
+           </strong>
+           Pour plus d'informations, n'hésitez pas à nous contacter:<br>
+           <strong>+229 97 32 39 32 / 97 30 84 93, tcombénin@gmail.com</strong>
+       </span>
+   </p>
+   <button id="lirePlusBtn">Lire la suite</button>
+</div>
+
+<script>
+   document.getElementById("lirePlusBtn").addEventListener("click", function() {
+       var moreText = document.getElementById("more");
+       var btnText = document.getElementById("lirePlusBtn");
+
+       if (moreText.style.display === "none") {
+           moreText.style.display = "inline";
+           btnText.textContent = "Lire moins";
+       } else {
+           moreText.style.display = "none";
+           btnText.textContent = "Lire la suite";
+       }
+   });
+</script>
+<!--
+
+  <section class="responsive-section over contenu">
+   <div class="title-box mb-10 wow fadeInLeft formation" data-wow-<link rel="stylesheet" href="styles.css">=".5s">
        <center><h3 class="section-title mt-10 center-heading-on-pc">Des informations sur nos formations</h3></center>
    </div>  
 
    <div class="center-text-on-pc">
        T-COM-BENIN : Un tremplin vers l'emploi au cœur de Cotonou
-       <br>Créé en 2020, T-COM-BENIN s'est rapidement imposé comme un acteur majeur de la formation professionnelle au Bénin. Situé à Cotonou, le cœur économique du pays, nous offrons des formations intensives et pratiques dans des domaines porteurs d'avenir : électro-télécommunication, électronique, informatique et froid et climatisation.
+       <br>Créé en 2020, T-COM-BENIN  <div id="more" style="display: none;">
    </div>
 
    <div class="center-text-on-pc">
@@ -511,21 +597,17 @@
    </div>
    <br>
    <div class="center-heading-on-pc">
-       <strong>Pourquoi choisir notre formation?</strong><br>
+      
    </div>
    <div class="center-text-on-pc">
-       Des formations adaptées au marché de l'emploi : Les programmes proposés sont conçus en étroite collaboration avec les entreprises, garantissant ainsi une adéquation parfaite entre les compétences acquises et les attentes des recruteurs.<br>
-       Un encadrement personnalisé : Les formateurs de T-COM-BENIN sont des professionnels expérimentés, à l'écoute des besoins de chaque apprenant.<br>
-       Des équipements modernes : Les ateliers et les salles de cours sont équipés de matériel de dernière génération, permettant aux apprenants de travailler dans des conditions optimales.<br>
-       Un accompagnement vers l'emploi : L'institut met tout en œuvre pour faciliter l'insertion professionnelle de ses diplômés, notamment grâce à un service d'orientation et à des partenariats avec les entreprises.
-   </div>
+       
    <br>
    
-       En choisissant T-COM-BENIN, vous investissez dans votre avenir professionnel et contribuez au développement économique du Bénin.
+      
    
    <br>
    <div class="center-heading-on-pc">
-       Modalités d'inscription:
+      
    </div>
    <div class="center-text-on-pc">
        Pour vous inscrire à l'une de nos formations, veuillez fournir les pièces suivantes :<br>
@@ -538,8 +620,10 @@
        Pour plus d'informations, n'hésitez pas à nous contacter:<br>
        <strong>+229 97 32 39 32 / 97 30 84 93, tcombénin@gmail.com</strong>
    </div>
+</div>
+<button id="lirePlusBtn">Lire la suite</button>
 </section>
-
+--> 
 
  <!-- testimonials two area start --> 
  <section class="testimonials-two-section fix over">
@@ -564,7 +648,7 @@
                            <div class="icon-1">
                               <i class="icon-comma-double"></i>
                            </div>
-                           <h4>Pédro Luciano</h4>
+                           <h4>Houkpè Luciano</h4>
                            <span>Informaticien</span>
                            <ul class="ratings">
                               <li><i class="fa fa-star"></i></li>
@@ -585,7 +669,7 @@
                            <div class="icon-1">
                               <i class="icon-comma-double"></i>
                            </div>
-                           <h4>Wisdom Handsome</h4>
+                           <h4>Wisdom Amegnanglo</h4>
                            <span>Ingénieur</span>
                            <ul class="ratings">
                               <li><i class="fa fa-star"></i></li>
@@ -660,6 +744,24 @@
             </div>
          </div>
          <!-- block -->
+         <div class="col-xxl-4 col-xl-4 col-lg-6">
+            <div class="blog-style-one">
+               <a class="blog-image w-img">
+                  <img src="assets/imgs/blog/affiche2.jpeg" alt="">
+               </a>
+               <div class="blog-content">
+                  <!--
+                  <div class="post-meta">
+                    
+                     <span class="p-relative"><i class="fal fa-calendar-alt"></i>Du 01 janvier, 2024 </span>
+                  </div>
+                  -->
+                  <hr>
+                  <h5 class="blog-title mb-30">Contatez-nous pour tout renseignement.</h5>
+                   
+               </div>
+            </div>
+         </div>
          <!-- block -->
          <div class="col-xxl-4 col-xl-4 col-lg-6">
             <div class="blog-style-one">
@@ -684,7 +786,7 @@
          <div class="col-xxl-4 col-xl-4 col-lg-6">
             <div class="blog-style-one">
                <a class="blog-image w-img">
-                  <img src="assets/imgs/blog/Whats.jpeg" alt="">
+                  <img src="assets/imgs/blog/affiche3.jpeg" alt="">
                </a>
                <div class="blog-content">                 
                   <hr>
@@ -762,7 +864,7 @@
    </footer>
    <!-- Footer area end -->
    
-
+   <link rel="stylesheet" href="styles.css">
    <!-- JS here -->
    <script src="assets/js/jquery-3.6.0.min.js"></script>
    <script src="assets/js/waypoints.min.js"></script>
@@ -774,7 +876,7 @@
    <script src="assets/js/counterup.js"></script>
    <script src="assets/js/wow.js"></script>
    <script src="assets/js/main.js"></script>
-
+   <script src="script.js"></script>
 </body>
 
 </html>
